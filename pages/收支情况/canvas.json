@@ -1,0 +1,638 @@
+{
+  "unpublishedPage": {
+    "name": "收支情况",
+    "slug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 570,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 71,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+              "widgetName": "Tabs1",
+              "borderColor": "#E0DEDE",
+              "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "tabsObj.tab1.isVisible"
+                }
+              ],
+              "displayName": "标签页",
+              "iconSVG": "/static/media/icon.74a6d653c8201e66f1cd367a3fba2657.svg",
+              "searchTags": [
+                "tabs"
+              ],
+              "topRow": 0,
+              "bottomRow": 49,
+              "parentRowSpace": 10,
+              "type": "TABS_WIDGET",
+              "hideCard": false,
+              "shouldScrollContents": true,
+              "animateLoading": true,
+              "parentColumnSpace": 12.5625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onTabSelected"
+                }
+              ],
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "borderRadius"
+                },
+                {
+                  "key": "boxShadow"
+                }
+              ],
+              "children": [
+                {
+                  "tabId": "tab1",
+                  "widgetName": "Canvas1",
+                  "displayName": "Canvas",
+                  "bottomRow": 440,
+                  "topRow": 0,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 440,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "schema": "{\"form\":{\"labelCol\":6,\"wrapperCol\":12,\"style\":{\"width\":\"inherit\"}},\"schema\":{\"type\":\"object\",\"properties\":{\"date\":{\"type\":\"string\",\"title\":\"日期\",\"x-decorator\":\"FormItem\",\"x-component\":\"DatePicker\",\"x-validator\":[],\"x-component-props\":{\"showToday\":true,\"showTime\":false},\"x-decorator-props\":{},\"name\":\"date\",\"required\":true,\"x-designable-id\":\"wu3kokbxc8p\",\"x-index\":0},\"time\":{\"type\":\"string\",\"title\":\"时间\",\"x-decorator\":\"FormItem\",\"x-component\":\"TimePicker\",\"x-validator\":[],\"x-component-props\":{\"showNow\":true},\"x-decorator-props\":{},\"name\":\"time\",\"x-designable-id\":\"pq5z9f3o0iz\",\"x-index\":1},\"type\":{\"title\":\"支出/收入\",\"x-decorator\":\"FormItem\",\"x-component\":\"Select\",\"x-validator\":[],\"x-component-props\":{\"allowClear\":false,\"autoClearSearchValue\":false,\"placeholder\":\"请选择类型\"},\"x-decorator-props\":{},\"name\":\"type\",\"required\":true,\"x-designable-id\":\"ktyaqov6a4x\",\"x-index\":2,\"enum\":[{\"children\":[],\"label\":\"支出\",\"value\":\"0\"},{\"children\":[],\"label\":\"收入\",\"value\":\"1\"}],\"default\":\"0\"},\"shoppedType\":{\"title\":\"类别\",\"x-decorator\":\"FormItem\",\"x-component\":\"Cascader\",\"x-validator\":[],\"x-component-props\":{\"allowClear\":false,\"changeOnSelect\":true,\"placeholder\":\"请选择类别\",\"showSearch\":true},\"x-decorator-props\":{},\"name\":\"shoppedType\",\"x-designable-id\":\"qzd8zc5koue\",\"x-index\":3,\"enum\":[{\"children\":[],\"label\":\"支出\",\"value\":\"zc\"},{\"children\":[],\"label\":\"收入\",\"value\":\"sr\"}],\"required\":false,\"x-reactions\":{\"dependencies\":[{\"property\":\"value\",\"type\":\"any\"}],\"fulfill\":{\"state\":{\"dataSource\":\"{{[\\n  { \\n    label : \\\"支出\\\", \\n    value: \\\"zc\\\",\\n    children: [\\n      {\\n        label : \\\"生活支出\\\", \\n        value: \\\"zc_sh\\\",\\n        children: [\\n          {\\n            label : \\\"服饰\\\", \\n            value: \\\"zc_fs\\\",\\n            children: [\\n              {\\n                label : \\\"上衣\\\", \\n                value: \\\"zc_sy\\\",\\n              },\\n              {\\n                label : \\\"裤子\\\", \\n                value: \\\"zc_kz\\\",\\n              },\\n              {\\n                label : \\\"内衣\\\", \\n                value: \\\"zc_ny\\\",\\n              },\\n              {\\n                label : \\\"鞋\\\", \\n                value: \\\"zc_x\\\",\\n              },\\n            ]\\n          },\\n          {\\n            label : \\\"吃饭\\\", \\n            value: \\\"zc_mc\\\",\\n            children: [\\n              {\\n                label : \\\"买菜\\\", \\n                value: \\\"zc_mc\\\",\\n              },\\n              {\\n                label : \\\"外卖\\\", \\n                value: \\\"zc_wm\\\",\\n                children: [\\n                  {\\n                    label : \\\"美团\\\", \\n                    value: \\\"zc_mt\\\",\\n                  },\\n                  {\\n                    label : \\\"饿了么\\\", \\n                    value: \\\"zc_elm\\\",\\n                  },\\n                ]\\n              },\\n              {\\n                label : \\\"饭店\\\", \\n                value: \\\"zc_fd\\\",\\n              },\\n            ]\\n          },\\n          {\\n            label : \\\"住房\\\", \\n            value: \\\"zc_zf\\\",\\n            children: [\\n              {\\n                label : \\\"租房\\\", \\n                value: \\\"zc_zf\\\",\\n                children: [\\n                  {\\n                    label : \\\"房租\\\", \\n                    value: \\\"zc_fz\\\",\\n                  },\\n                  {\\n                    label : \\\"水电费\\\", \\n                    value: \\\"zc_sdf\\\",\\n                  },\\n                  {\\n                    label : \\\"其他\\\", \\n                    value: \\\"zc_zf_qt\\\",\\n                  },\\n                ]\\n              },\\n              {\\n                label : \\\"酒店\\\", \\n                value: \\\"zc_jd\\\",\\n              },\\n            ]\\n          },\\n          {\\n            label : \\\"交通\\\", \\n            value: \\\"zc_jt\\\",\\n            children: [\\n              {\\n                label : \\\"地铁\\\", \\n                value: \\\"zc_jt_dt\\\",\\n              },\\n              {\\n                label : \\\"公交\\\", \\n                value: \\\"zc_jt_gj\\\",\\n              },\\n              {\\n                label : \\\"大巴\\\", \\n                value: \\\"zc_jt_db\\\",\\n              },\\n            ]\\n          },\\n        ]\\n      },\\n      {\\n        label : \\\"学习支出\\\", \\n        value: \\\"zc_xx\\\",\\n      },\\n      {\\n        label : \\\"人情往来支出\\\", \\n        value: \\\"zc_rqwl\\\",\\n        children: [\\n          {\\n            label: '随份子',\\n            value: 'zc_rqwl_sfz'\\n          },\\n          {\\n            label: '串亲戚',\\n            value: 'zc_rqwl_cqq'\\n          }\\n        ]\\n      },\\n      {\\n        label: '保障支出',\\n        value: 'zc_bzzc',\\n        children: [\\n          {\\n            label: '保险',\\n            value: 'zc_bzzc_bx'\\n          }\\n        ]\\n      }\\n    ]\\n   },\\n  { \\n    label : \\\"收入\\\", \\n    value: \\\"sr\\\",\\n    children: [\\n      {\\n        label : \\\"薪酬\\\", \\n        value: \\\"sr_xc\\\",\\n      },\\n      {\\n        label: '副业',\\n        value: 'sr_fy',\\n        children: [\\n          {\\n            label: '刷视频',\\n            value: 'sr_fy_ssp',\\n            children: [\\n              {\\n                label: '淘宝',\\n                value: 'sr_fy_tb'\\n              },\\n              {\\n                label : \\\"拼多多\\\", \\n                value: \\\"sr_fy_pdd\\\",\\n              },\\n              {\\n                label : \\\"美团\\\", \\n                value: \\\"sr_fy_mt\\\",\\n              },\\n            ]\\n          },\\n        ]\\n      },\\n      {\\n        label: '投资收益',\\n        value: 'sr_tzsy',\\n        children: [\\n          {\\n            label: '银行卡',\\n            value: 'sr_tzsy_yhk',\\n          },\\n          {\\n            label: '余额宝',\\n            value: 'sr_tzsy_yeb'\\n          }\\n        ]\\n      }\\n    ]\\n  }\\n]}}\"}}}},\"money\":{\"type\":\"number\",\"title\":\"动账金额\",\"x-decorator\":\"FormItem\",\"x-component\":\"NumberPicker\",\"x-validator\":[],\"x-component-props\":{\"placeholder\":\"请输入动账金额\"},\"x-decorator-props\":{\"addonAfter\":\"\",\"addonBefore\":\"\",\"labelAlign\":\"right\",\"wrapperAlign\":\"left\",\"fullness\":false,\"inset\":false,\"tooltipLayout\":\"icon\",\"size\":\"default\",\"feedbackLayout\":\"loose\"},\"x-designable-id\":\"e2o8v17rr8l\",\"x-index\":4,\"name\":\"money\",\"required\":true},\"desc\":{\"type\":\"string\",\"title\":\"描述\",\"x-decorator\":\"FormItem\",\"x-component\":\"Input.TextArea\",\"x-validator\":[],\"x-component-props\":{\"autoSize\":true,\"placeholder\":\"请填写描述\"},\"x-decorator-props\":{},\"x-designable-id\":\"7cryzw5e9rt\",\"x-index\":5,\"name\":\"desc\"}},\"x-designable-id\":\"93y5ohpl9pv\"}}",
+                      "widgetName": "formily1",
+                      "isCanvas": false,
+                      "displayName": "Formily表单",
+                      "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
+                      "searchTags": [
+                        "form",
+                        "submit"
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 43,
+                      "parentRowSpace": 10,
+                      "title": "",
+                      "type": "FORMILY_WIDGET",
+                      "triggerLabel": "打开表单",
+                      "hideCard": false,
+                      "parentColumnSpace": 12.5625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "schema"
+                        }
+                      ],
+                      "resetLabel": "重置",
+                      "showReset": true,
+                      "key": "uvdwpjhrpp",
+                      "submitLabel": "提交",
+                      "formType": "PLAIN",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "widgetId": "04k41616gd",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "gt0a1149uf",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "originalTopRow": 73,
+                      "originalBottomRow": 111
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "m80k936fyz",
+                  "isDeprecated": false,
+                  "tabName": "记账小账本",
+                  "rightColumn": 301.5,
+                  "detachFromLayout": true,
+                  "widgetId": "gt0a1149uf",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "wlyuudp46y",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                },
+                {
+                  "tabId": "tab2",
+                  "widgetName": "Canvas2",
+                  "displayName": "Canvas",
+                  "bottomRow": 440,
+                  "topRow": 0,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": true,
+                  "hideCard": true,
+                  "shouldScrollContents": false,
+                  "minHeight": 440,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "Echarts1",
+                      "allowScroll": false,
+                      "displayName": "Echarts",
+                      "iconSVG": "/static/media/icon.d639d74ea3f095d6be69c6db4b415df6.svg",
+                      "searchTags": [
+                        "graph",
+                        "echart",
+                        "chart",
+                        "visualisations"
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 42,
+                      "parentRowSpace": 10,
+                      "customEchartConfig": {
+                        "title": {
+                          "text": "基础折线图"
+                        },
+                        "xAxis": {
+                          "type": "category",
+                          "data": [
+                            "Mon",
+                            "Tue",
+                            "Wed",
+                            "Thu",
+                            "Fri",
+                            "Sat",
+                            "Sun"
+                          ]
+                        },
+                        "yAxis": {
+                          "type": "value"
+                        },
+                        "series": [
+                          {
+                            "data": [
+                              150,
+                              230,
+                              224,
+                              218,
+                              135,
+                              147,
+                              260
+                            ],
+                            "type": "line"
+                          }
+                        ]
+                      },
+                      "type": "ECHART_WIDGET",
+                      "hideCard": false,
+                      "chartData": {
+                        "vw0u91lzx1": {
+                          "type": "line",
+                          "seriesName": "秋季系列",
+                          "data": "[\n  {\n    \"value\": 335,\n    \"name\": \"支出\"\n  },\n  {\n    \"value\": 20,\n    \"name\": \"收入\"\n  }\n]"
+                        }
+                      },
+                      "animateLoading": true,
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 12.5625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        },
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        }
+                      ],
+                      "mycustom": 2,
+                      "key": "2lgdjp6ed2",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "widgetId": "yw0xd6hqxg",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "2foc8e9x1g",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "yAxisName": "销量",
+                      "originalTopRow": 119,
+                      "chartName": "今日收支情况",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "xAxisName": "品类",
+                      "originalBottomRow": 151,
+                      "chartType": "PIE_CHART"
+                    }
+                  ],
+                  "isDisabled": false,
+                  "key": "m80k936fyz",
+                  "isDeprecated": false,
+                  "tabName": "今日开支",
+                  "rightColumn": 301.5,
+                  "detachFromLayout": true,
+                  "widgetId": "2foc8e9x1g",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "wlyuudp46y",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                },
+                {
+                  "tabId": "tab571ui7q46z",
+                  "widgetName": "Canvas3",
+                  "displayName": "Canvas",
+                  "topRow": 1,
+                  "bottomRow": 440,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 440,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "Echarts2",
+                      "allowScroll": false,
+                      "displayName": "Echarts",
+                      "iconSVG": "/static/media/icon.d639d74ea3f095d6be69c6db4b415df6.svg",
+                      "searchTags": [
+                        "graph",
+                        "echart",
+                        "chart",
+                        "visualisations"
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 42,
+                      "parentRowSpace": 10,
+                      "customEchartConfig": {
+                        "title": {
+                          "text": "基础折线图"
+                        },
+                        "xAxis": {
+                          "type": "category",
+                          "data": [
+                            "Mon",
+                            "Tue",
+                            "Wed",
+                            "Thu",
+                            "Fri",
+                            "Sat",
+                            "Sun"
+                          ]
+                        },
+                        "yAxis": {
+                          "type": "value"
+                        },
+                        "series": [
+                          {
+                            "data": [
+                              150,
+                              230,
+                              224,
+                              218,
+                              135,
+                              147,
+                              260
+                            ],
+                            "type": "line"
+                          }
+                        ]
+                      },
+                      "type": "ECHART_WIDGET",
+                      "hideCard": false,
+                      "chartData": {
+                        "vw0u91lzx1": {
+                          "type": "line",
+                          "seriesName": "秋季系列/",
+                          "data": [
+                            {
+                              "value": 335,
+                              "name": "衬衫"
+                            },
+                            {
+                              "value": 234,
+                              "name": "羊毛衫"
+                            },
+                            {
+                              "value": 1548,
+                              "name": "雪纺衫"
+                            },
+                            {
+                              "value": 758,
+                              "name": "裤子"
+                            },
+                            {
+                              "value": 358,
+                              "name": "高跟鞋"
+                            },
+                            {
+                              "value": 658,
+                              "name": "袜子"
+                            }
+                          ]
+                        }
+                      },
+                      "animateLoading": true,
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 6.42431640625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        },
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        }
+                      ],
+                      "mycustom": 2,
+                      "key": "2lgdjp6ed2",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "widgetId": "t82qmkijra",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "zw7wceqbuf",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "yAxisName": "销量",
+                      "chartName": "",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "xAxisName": "品类",
+                      "chartType": "LINE_CHART"
+                    }
+                  ],
+                  "key": "m80k936fyz",
+                  "isDeprecated": false,
+                  "tabName": "月度概览",
+                  "rightColumn": 791.4375,
+                  "detachFromLayout": true,
+                  "widgetId": "zw7wceqbuf",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "wlyuudp46y",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                },
+                {
+                  "tabId": "tab2alzny8cb7",
+                  "widgetName": "Canvas4",
+                  "displayName": "Canvas",
+                  "topRow": 1,
+                  "bottomRow": 440,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 440,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+                      "widgetName": "Echarts3",
+                      "allowScroll": false,
+                      "displayName": "Echarts",
+                      "iconSVG": "/static/media/icon.d639d74ea3f095d6be69c6db4b415df6.svg",
+                      "searchTags": [
+                        "graph",
+                        "echart",
+                        "chart",
+                        "visualisations"
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 42,
+                      "parentRowSpace": 10,
+                      "customEchartConfig": {
+                        "title": {
+                          "text": "基础折线图"
+                        },
+                        "xAxis": {
+                          "type": "category",
+                          "data": [
+                            "Mon",
+                            "Tue",
+                            "Wed",
+                            "Thu",
+                            "Fri",
+                            "Sat",
+                            "Sun"
+                          ]
+                        },
+                        "yAxis": {
+                          "type": "value"
+                        },
+                        "series": [
+                          {
+                            "data": [
+                              150,
+                              230,
+                              224,
+                              218,
+                              135,
+                              147,
+                              260
+                            ],
+                            "type": "line"
+                          }
+                        ]
+                      },
+                      "type": "ECHART_WIDGET",
+                      "hideCard": false,
+                      "chartData": {
+                        "vw0u91lzx1": {
+                          "type": "line",
+                          "seriesName": "秋季系列",
+                          "data": [
+                            {
+                              "value": 335,
+                              "name": "衬衫"
+                            },
+                            {
+                              "value": 234,
+                              "name": "羊毛衫"
+                            },
+                            {
+                              "value": 1548,
+                              "name": "雪纺衫"
+                            },
+                            {
+                              "value": 758,
+                              "name": "裤子"
+                            },
+                            {
+                              "value": 358,
+                              "name": "高跟鞋"
+                            },
+                            {
+                              "value": 658,
+                              "name": "袜子"
+                            }
+                          ]
+                        }
+                      },
+                      "animateLoading": true,
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 6.42431640625,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "boxShadow"
+                        },
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        }
+                      ],
+                      "mycustom": 2,
+                      "key": "2lgdjp6ed2",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "widgetId": "8vhs4kb2dw",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "zbbxhy5hn0",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "yAxisName": "销量",
+                      "chartName": "",
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "xAxisName": "品类",
+                      "chartType": "LINE_CHART"
+                    }
+                  ],
+                  "key": "m80k936fyz",
+                  "isDeprecated": false,
+                  "tabName": "年度概览",
+                  "rightColumn": 791.4375,
+                  "detachFromLayout": true,
+                  "widgetId": "zbbxhy5hn0",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "wlyuudp46y",
+                  "renderMode": "CANVAS",
+                  "isLoading": false
+                }
+              ],
+              "borderWidth": 1,
+              "key": "zetb5salm8",
+              "backgroundColor": "#FFFFFF",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "dynamicHeight": "AUTO_HEIGHT",
+              "widgetId": "wlyuudp46y",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "defaultTab": "记账小账本",
+              "onTabSelected": "{{clearStore()}}",
+              "shouldShowTabs": true,
+              "tabsObj": {
+                "tab1": {
+                  "label": "记账小账本",
+                  "id": "tab1",
+                  "widgetId": "gt0a1149uf",
+                  "isVisible": "true",
+                  "index": 0,
+                  "isDuplicateLabel": false
+                },
+                "tab2": {
+                  "label": "今日开支",
+                  "id": "tab2",
+                  "widgetId": "2foc8e9x1g",
+                  "isVisible": true,
+                  "index": 1,
+                  "isDuplicateLabel": false
+                },
+                "tab571ui7q46z": {
+                  "id": "tab571ui7q46z",
+                  "index": 2,
+                  "label": "月度概览",
+                  "widgetId": "zw7wceqbuf",
+                  "isVisible": true
+                },
+                "tab2alzny8cb7": {
+                  "id": "tab2alzny8cb7",
+                  "index": 3,
+                  "label": "年度概览",
+                  "widgetId": "zbbxhy5hn0",
+                  "isVisible": true
+                }
+              },
+              "isVisible": true,
+              "version": 3,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "originalTopRow": 0,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "maxDynamicHeight": 9000,
+              "originalBottomRow": 50,
+              "minDynamicHeight": 10
+            }
+          ]
+        },
+        "layoutOnLoadActions": [],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "收支情况",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "65a7aac602f2017cc3d46896_65a7aac602f2017cc3d46898"
+}

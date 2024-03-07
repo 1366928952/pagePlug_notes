@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "id": "收支情况",
+      "isDefault": true
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#C7F3F0",
+  "icon": "yen",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "viewerLayout": "{\"color\":\"var(--ads-color-brand)\",\"logoUrl\":\"\",\"name\":\"demo\",\"treeData\":[{\"title\":\"收支情况\",\"pageId\":\"65a7aac602f2017cc3d46899\",\"isPage\":true}],\"outsiderTree\":[]}",
+  "deleted": false
+}
